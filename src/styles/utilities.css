@@ -1,0 +1,366 @@
+.card {
+  width: fit-content;
+  border: solid 1px var(--border);
+  border-top: solid 1px var(--highline);
+  border-bottom: solid 1px var(--bottomline);
+  background: var(--bg);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.bg {
+  background-color: var(--bg);
+}
+
+.bgLight {
+  background-color: var(--bg-light);
+}
+
+.bgDark {
+  background-color: var(--bg-dark);
+}
+
+.bgGrad {
+  background: linear-gradient(180deg, var(--bg) 5%, var(--bg-dark) 100%);
+}
+
+.bgPrimary {
+  background-color: var(--primary);
+}
+
+.titleText {
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+
+.bodyText {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.smallText {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.boldText {
+  font-weight: 700;
+}
+
+.mutedText {
+  color: var(--text-muted);
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textDark {
+  color: var(--bg);
+}
+
+.textLight {
+  color: var(--text);
+}
+
+.flex {
+  display: flex;
+}
+
+.inlineFlex {
+  display: inline-flex;
+}
+
+.block {
+  display: block;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.grid {
+  display: grid;
+}
+
+.inlineGrid {
+  display: inline-grid;
+}
+
+.hide {
+  display: none;
+}
+
+.flexCol {
+  flex-direction: column;
+}
+
+.justCenter {
+  justify-content: center;
+}
+
+.justStart {
+  justify-content: flex-start;
+}
+
+.justEnd {
+  justify-content: flex-end;
+}
+
+.justBetween {
+  justify-content: space-between;
+}
+
+.justAround {
+  justify-content: space-around;
+}
+
+.justEvenly {
+  justify-content: space-evenly;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+.gap1 {
+  gap: var(--spacing-1);
+}
+
+.gap2 {
+  gap: var(--spacing-2);
+}
+
+.gap3 {
+  gap: var(--spacing-3);
+}
+
+.gap4 {
+  gap: var(--spacing-4);
+}
+
+.gap5 {
+  gap: var(--spacing-5);
+}
+
+.gap6 {
+  gap: var(--spacing-6);
+}
+
+.p0 {
+  padding: 0;
+}
+
+.p1 {
+  padding: var(--spacing-1);
+}
+
+.p2 {
+  padding: var(--spacing-2);
+}
+
+.p3 {
+  padding: var(--spacing-3);
+}
+
+.p4 {
+  padding: var(--spacing-4);
+}
+
+.p5 {
+  padding: var(--spacing-5);
+}
+
+.p6 {
+  padding: var(--spacing-6);
+}
+
+.px1 {
+  padding-left: var(--spacing-1);
+  padding-right: var(--spacing-1);
+}
+
+.px2 {
+  padding-left: var(--spacing-2);
+  padding-right: var(--spacing-2);
+}
+
+.px3 {
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-3);
+}
+
+.px4 {
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+}
+
+.px5 {
+  padding-left: var(--spacing-5);
+  padding-right: var(--spacing-5);
+}
+
+.py1 {
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
+}
+
+.py2 {
+  padding-top: var(--spacing-2);
+  padding-bottom: var(--spacing-2);
+}
+
+.py3 {
+  padding-top: var(--spacing-3);
+  padding-bottom: var(--spacing-3);
+}
+
+.py4 {
+  padding-top: var(--spacing-4);
+  padding-bottom: var(--spacing-4);
+}
+
+.py5 {
+  padding-top: var(--spacing-5);
+  padding-bottom: var(--spacing-5);
+}
+
+/* Margin utilities */
+.m1 {
+  margin: var(--spacing-1);
+}
+
+.m2 {
+  margin: var(--spacing-2);
+}
+
+.m3 {
+  margin: var(--spacing-3);
+}
+
+.m4 {
+  margin: var(--spacing-4);
+}
+
+.m5 {
+  margin: var(--spacing-5);
+}
+
+.m6 {
+  margin: var(--spacing-6);
+}
+
+.mx1 {
+  margin-left: var(--spacing-1);
+  margin-right: var(--spacing-1);
+}
+
+.mx2 {
+  margin-left: var(--spacing-2);
+  margin-right: var(--spacing-2);
+}
+
+.mx3 {
+  margin-left: var(--spacing-3);
+  margin-right: var(--spacing-3);
+}
+
+.mx4 {
+  margin-left: var(--spacing-4);
+  margin-right: var(--spacing-4);
+}
+
+.mx5 {
+  margin-left: var(--spacing-5);
+  margin-right: var(--spacing-5);
+}
+
+.my1 {
+  margin-top: var(--spacing-1);
+  margin-bottom: var(--spacing-1);
+}
+
+.my2 {
+  margin-top: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+}
+
+.my3 {
+  margin-top: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+.my4 {
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.my5 {
+  margin-top: var(--spacing-5);
+  margin-bottom: var(--spacing-5);
+}
+
+.rounded1 {
+  border-radius: var(--spacing-2);
+}
+
+.rounded2 {
+  border-radius: var(--spacing-2);
+}
+
+.rounded3 {
+  border-radius: var(--spacing-3);
+}
+
+.rounded4 {
+  border-radius: var(--spacing-4);
+}
+
+.rounded5 {
+  border-radius: var(--spacing-5);
+}
+
+.rounded6 {
+  border-radius: var(--spacing-6);
+}
+
+.roundedxl {
+  border-radius: 24px;
+}
+
+.roundedFull {
+  border-radius: 99px;
+}
+
+.wFull {
+  width: 100%;
+}
+
+.hFull {
+  height: 100%;
+}
+
+.wFit {
+  width: fit-content;
+}
+
+.hFit {
+  height: fit-content;
+}
+
+.relative {
+  position: relative;
+}
+
+.mAuto {
+  margin: 0 auto;
+}
+
+.darkContainer {
+  padding: var(--spacing-6);
+  background-color: var(--bg-dark);
+}

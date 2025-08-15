@@ -1,0 +1,15 @@
+.registerContainer {
+  width: 386px;
+}
+
+.registerContainer input {
+  width: 100%;
+}
+
+hr {
+  border: 1px solid var(--border);
+}
+
+.forgotPass {
+  margin-left: auto;
+}

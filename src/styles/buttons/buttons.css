@@ -1,0 +1,47 @@
+.btn {
+  padding: var(--spacing-3) var(--spacing-6);
+}
+
+.btn-filled {
+  background-color: var(--text);
+}
+
+.btn-filled:hover {
+  background-color: var(--text-muted);
+}
+
+.btn-filled * {
+  color: var(--bg-dark);
+}
+
+.btn-sidebar {
+  padding-left: var(--spacing-3);
+  width: 100%;
+}
+
+.btn-sidebar span {
+  padding: 0 36px;
+}
+
+.btn-border {
+  border: solid 1px var(--border);
+}
+
+.btn-wide {
+  width: 100%;
+  background-color: var(--text);
+  justify-content: center;
+}
+
+.btn-wide:hover {
+  background-color: var(--text-muted);
+}
+
+.btn-wide * {
+  color: var(--bg-dark);
+}
+
+.btn-link:hover * {
+  color: var(--text);
+  text-decoration: underline;
+}

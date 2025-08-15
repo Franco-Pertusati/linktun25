@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(styles/utilities.css);
+@import url(styles/normalize.css);
+@import url(styles/buttons/buttons.css);
+
+:root {
+  --bg-dark: hsl(0, 0%, 5%);
+  --bg: hsl(0, 0%, 10%);
+  --bg-light: hsl(0, 0%, 15%);
+
+  --border: hsl(0, 0%, 20%);
+  --highline: hsl(0, 0%, 24%);
+  --bottomline: hsl(0, 0%, 14%);
+
+  --text: hsl(0, 0%, 90%);
+  --text-muted: hsl(0, 0%, 75%);
+
+  --primary: #F0DB4C;
+
+  --spacing-1: 2px;
+  --spacing-2: 4px;
+  --spacing-3: 6px;
+  --spacing-4: 8px;
+  --spacing-5: 10px;
+  --spacing-6: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'inter', "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: var(--font);
+  font-size: 62.5%;
+  font-weight: normal;
+}
+
+body {
+  background-color: var(--bg-light);
+  height: 100vh;
+}
+
+body * {
+  color: var(--text);
+  font-size: 1.8rem;
+}
+
+button, a {
+  background-color: transparent;
+  border-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: var(--spacing-6);
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  margin: 0;
+  font-weight: bolder;
+}
+
+section {
+  padding: 0 12px;
+}
+
+input {
+  padding: var(--spacing-4);
+  background-color: var(--bg-dark);
+  border-style: none;
+  border-radius: var(--spacing-4);
+}
+
+input:focus {
+  outline: none;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
