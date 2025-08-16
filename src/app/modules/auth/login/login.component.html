@@ -1,35 +1,43 @@
 <div class="hFull bgDark flex justCenter itemsCenter">
-  <div class="flex flexCol gap6 registerContainer">
-    <h1 class="titleText">Login into Linktun</h1>
-    <br />
-    <form class="flex flexCol gap6" action="">
-      <div class="flex flexCol gap2">
-        <span>Email</span>
-        <input class="card" type="text" placeholder="jhondoe123@mail.com" />
+  <div class="flex flexCol hFull gap justBetween registerContainer">
+    <h1 class="titleText textCenter">Linktun</h1>
+    <div class="flex flexCol gap6">
+      <strong>Login into your Linktun account.</strong>
+      <br />
+      <form class="flex flexCol gap6" action="">
+        <div class="flex flexCol gap2">
+          <span>Email</span>
+          <input class="card" type="text" placeholder="jhondoe123@mail.com" />
+        </div>
+        <div class="flex flexCol gap2">
+          <span>Password</span>
+          <input class="card" type="password" value="asfwaf" />
+        </div>
+        <a class="btn-link">
+          <span class="mutedText forgotPass">Forgot Password?</span>
+        </a>
+        <button class="p6 btn-wide">
+          <span>Login</span>
+        </button>
+      </form>
+      <div class="flex itemsCenter gap3">
+        <hr class="wFull" />
+        <span class="mutedText">or</span>
+        <hr class="wFull" />
       </div>
-      <div class="flex flexCol gap2">
-        <span>Password</span>
-        <input class="card" type="text" placeholder="******" />
+      <app-google-auth-btn />
+      <br />
+      <div class="flex gap3 justCenter">
+        <span class="mutedText">Not on Linktun yet?</span>
+        <a class="btn-link" href="">
+          <span>Sign up</span>
+        </a>
       </div>
-      <a class="btn-link">
-        <span class="mutedText forgotPass">Forgot Password?</span>
-      </a>
-      <button class="p6 btn-wide">
-        <span>Login</span>
-      </button>
-    </form>
-    <div class="flex itemsCenter gap3">
-      <hr class="wFull" />
-      <span class="mutedText">or</span>
-      <hr class="wFull" />
     </div>
-    <app-google-auth-btn />
-    <br>
-    <div class="flex gap3 justCenter">
-      <span class="mutedText">Not on Linktun yet?</span>
-      <a class="btn-link" href="">
-        <span>Sign up</span>
-      </a>
+    <div class="textCenter p6">
+      <span class="mutedText">
+        By continuing, you agree to Linktun's Terms of Service and Privacy Policy
+      </span>
     </div>
   </div>
 </div>
