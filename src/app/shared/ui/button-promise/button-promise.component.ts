@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { OperationStatus } from '../../../core/typs/operationStatus';
+import { OperationStatus } from '../../../core/interfaces/operationStatus';
 
 @Component({
   selector: 'app-button-promise',

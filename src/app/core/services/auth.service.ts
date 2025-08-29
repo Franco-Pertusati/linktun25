@@ -52,6 +52,24 @@ export class AuthService {
     }
   }
 
+  async verifyUser(): Promise<boolean> {
+    try {
+      const response = await fetch(`${this.apiUrl}/verify`, {
+        method: 'GET',
+        credentials: 'include'
+      })
+
+      if (!response) return false
+
+      const data = await response.json();
+      console.log(data)
+      return data.valid === true;
+    } catch (error) {
+      console.log("verificaion fallida")
+      return false
+    }
+  }
+
   private showErrorToast(procces: 'login' | 'register', error: Error) {
     this.toast.error(`Erorr during ${procces}`, error.message)
   }

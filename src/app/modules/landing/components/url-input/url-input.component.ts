@@ -4,7 +4,7 @@ import { FormsModule, NgModel } from '@angular/forms';
 import { ToastService } from '../../../../core/services/toast.service';
 import { LinkService } from '../../../../core/services/link.service';
 import { ButtonPromiseComponent } from "../../../../shared/ui/button-promise/button-promise.component";
-import { OperationStatus } from '../../../../core/typs/operationStatus';
+import { OperationStatus } from '../../../../core/interfaces/operationStatus';
 
 @Component({
   selector: 'app-url-input',
