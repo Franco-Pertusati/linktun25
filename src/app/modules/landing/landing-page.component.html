@@ -1,0 +1,33 @@
+<div class="layout bgDark hFull">
+  <div class="gridContainer">
+    <div class="card" id="urlInputContainer">
+      <app-url-input />
+      <div id="urlListContainer">
+        <app-landing-url-list />
+      </div>
+    </div>
+    <div class="card" id="headerContainer">
+      <app-landing-header />
+    </div>
+    <div class="card flex flexCol gap3 itemsCenter justCenter">
+      <app-button [icon]="'open_in_new'" [extraCss]="'titleCase'" />
+      <span class="mutedText smallText"> GitHub </span>
+    </div>
+    <div class="card flex flexCol gap3 itemsCenter justCenter">
+      <app-button
+        [icon]="'person_check'"
+        [extraCss]="'titleCase'"
+        (click)="openRegisterDialog()"
+      />
+      <span class="mutedText smallText"> Register </span>
+    </div>
+    <div class="card flex flexCol gap3 itemsCenter justCenter">
+      <app-button
+        [icon]="'person'"
+        [extraCss]="'titleCase'"
+        (click)="openLoginDialog()"
+      />
+      <span class="mutedText smallText"> Login </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.layout {
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  padding: var(--spacing-6) 0;
+}
+
+.gridContainer {
+  --squareSize: 128px;
+  display: grid;
+  grid-template-columns: repeat(3, var(--squareSize));
+  grid-template-rows: repeat(8, var(--squareSize));
+  gap: var(--spacing-3);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  padding: 12px;
+}
+
+#urlListContainer,
+#headerContainer {
+  grid-column: 3 span;
+  grid-row: 3 span;
+}
+
+#urlInputContainer {
+  grid-column: 3 span;
+  grid-row: 4 span;
+  position: relative;
+}
+
+#urlListContainer {
+  overflow-y: auto;
+}
+
+@media(min-width: 822px) {
+  .gridContainer {
+    --squareSize: 128px;
+    grid-template-columns: repeat(6, var(--squareSize));
+    grid-template-rows: repeat(4, var(--squareSize));
+  }
+}
+
+@media(min-width: 1200px) {
+  .gridContainer {
+    --squareSize: 156px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .layout {
+    width: 100vw;
+    height: 100vh;
+  }
+}

@@ -1,0 +1,12 @@
+.inputContainer input {
+  padding: 0;
+  border-radius: 0;
+}
+
+.inputContainer:focus-within {
+  outline: 1px solid var(--primary);
+}
+
+.urlInputContainer {
+  padding-bottom: 12px;
+}

@@ -7,8 +7,13 @@ export const routes: Routes = [
       .then(m => m.AUTH_ROUTES)
   },
   {
+    path: 'dashboard',
+    loadChildren: () => import('./modules/dashboard/dashboard.routes')
+      .then(m => m.DASHBOARD_ROUTES)
+  },
+  {
     path: '',
-    redirectTo: 'auth',
-    pathMatch: 'full'
-  }
+    loadChildren: () => import('./modules/landing/auth.routes')
+      .then(m => m.LANDING_PAGE_ROUTES)
+  },
 ];

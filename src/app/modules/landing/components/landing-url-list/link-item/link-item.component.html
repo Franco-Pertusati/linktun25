@@ -1,0 +1,29 @@
+@let l = link();
+
+<div class="p6 itemsCenter bgDark flex gap6 rounded6">
+  <div class="imgContainer">
+    <img
+      src="https://www.google.com/s2/favicons?sz=64&domain_url=https://www.youtube.com/watch?v=9ui3YBR1z-g"
+      alt=""
+    />
+  </div>
+  <div class="linksContainer wFull">
+    <div class="flex gap3 itemsCenter">
+      <a class="boldText shortLink" [href]="`${linkTunUrl}${l.shortCode}`">
+        {{ reomoveLinkScheme(l.shortLink) }}
+      </a>
+      <app-button-copy [texToCopy]="l.shortLink" [extraCss]="'p0'" />
+      <button (click)="openQrDialog()">
+        <i class="material-symbols-rounded mutedText">qr_code</i>
+      </button>
+    </div>
+    <div class="ogLink">
+      <span class="class mutedText smallText">
+        {{ l.originalUrl }}
+      </span>
+    </div>
+  </div>
+  <button (click)="openLinkPanel()">
+    <i class="material-symbols-rounded mutedText">more_vert</i>
+  </button>
+</div>

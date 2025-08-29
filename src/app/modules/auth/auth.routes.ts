@@ -1,7 +1,8 @@
 import { Routes } from "@angular/router";
 import { AuthComponent } from "./auth.component";
-import { LoginComponent } from "./login/login.component";
-import { RegisterComponent } from "./register/register.component";
+import { RegisterComponent } from "./pages/register/register.component";
+import { LoginFormComponent } from "./components/login-form/login-form.component";
+import { LoginComponent } from "./pages/login/login.component";
 
 export const AUTH_ROUTES: Routes = [
   {
@@ -10,7 +11,7 @@ export const AUTH_ROUTES: Routes = [
     children: [
       { path: 'sign-in', component: LoginComponent },
       { path: 'sign-up', component: RegisterComponent },
-      { path: '', redirectTo: 'sign-in', pathMatch: 'full' }
+      { path: '', redirectTo: 'sign-up', pathMatch: 'full' }
     ]
   }
 ];

@@ -1,0 +1,27 @@
+.ogLink {
+  text-wrap-mode: nowrap;
+  text-overflow: ellipsis;
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 60%, rgba(202, 240, 76, 0) 100%);
+}
+
+.imgContainer {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  padding: var(--spacing-3);
+  border-radius: 99px;
+  display: grid;
+  place-items: center;
+}
+
+img {
+  width: 28px;
+  height: 28px;
+}
+
+.shortLink {
+  text-wrap-mode: nowrap;
+  text-overflow: ellipsis;
+  max-width: 124px;
+  overflow: hidden;
+}

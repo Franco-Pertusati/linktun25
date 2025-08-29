@@ -1,0 +1,56 @@
+<form
+  [formGroup]="loginForm"
+  (ngSubmit)="onSubmit()"
+  class="flex flexCol gap6"
+>
+<!-- EMAIL -->
+  <div class="flex flexCol gap3">
+    <div class="flex gap3 items-center">
+      <label for="email">Email</label>
+      @if (loginForm.get('email')?.touched && loginForm.get('email')?.invalid) {
+        <span class="errorText smallText">
+          @if (loginForm.get('email')?.errors?.['required']) {
+            Email is required
+          }
+          @if (loginForm.get('email')?.errors?.['email']) {
+            Invalid email
+          }
+        </span>
+      }
+    </div>
+    <input
+      placeholder="jhondoe@mail.com"
+      id="email"
+      type="text"
+      class="wFull card"
+      formControlName="email"
+    />
+  </div>
+
+  <!-- PASSWORD -->
+  <div class="flex flexCol gap3">
+    <div class="flex gap3 items-center">
+      <label for="password">Password</label>
+      @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
+        <span class="errorText smallText">
+          @if (loginForm.get('password')?.errors?.['required']) {
+            Password is required
+          }
+          @if (loginForm.get('password')?.errors?.['minlength']) {
+            Must be at least {{ loginForm.get('password')?.errors?.['minlength'].requiredLength }} characters
+          }
+        </span>
+      }
+    </div>
+    <input
+      placeholder="········"
+      id="password"
+      type="password"
+      class="wFull card"
+      formControlName="password"
+    />
+  </div>
+  <button class="btn btn-form" type="submit">
+    <span>Login</span>
+  </button>
+</form>

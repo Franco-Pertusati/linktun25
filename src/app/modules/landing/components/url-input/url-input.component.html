@@ -1,0 +1,25 @@
+<div class="flex flexCol gap3 urlInputContainer">
+  <div>
+    <h2 class="titleText">Short a long url</h2>
+    <span class="mutedText smallText my3 mAuto">
+      To prevent abuse, links will be removed after 30 minutes.
+    </span>
+  </div>
+  <div class="inputContainer bgDark p3 rounded6 wFull flex gap3 itemsCenter">
+    <i class="material-symbols-rounded p3">link</i>
+    <input
+      type="text"
+      class="wFull focusNone"
+      id="urlInput"
+      placeholder="A very long url"
+      [(ngModel)]="longUrl"
+      (keydown.enter)="shortenUrl()"
+    />
+    <app-button-promise
+      [style]="'filled'"
+      [state]="shortenState"
+      [icon]="'keyboard_return'"
+      (click)="shortenUrl()"
+    />
+  </div>
+</div>

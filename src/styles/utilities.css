@@ -8,6 +8,14 @@
   border-radius: 12px;
 }
 
+.dialogCard {
+  border-radius: 24px;
+  background-color: var(--bg-dark);
+  border: solid 1px var(--border);
+  border-top: solid 1px var(--highline);
+  border-bottom: solid 1px var(--bottomline);
+}
+
 .bg {
   background-color: var(--bg);
 }
@@ -43,12 +51,21 @@
   font-size: 1.4rem;
 }
 
+.errorText {
+  color: var(--red);
+  font-weight: bold;
+}
+
 .boldText {
   font-weight: 700;
 }
 
 .mutedText {
   color: var(--text-muted);
+}
+
+.primaryText {
+  color: var(--primary);
 }
 
 .textCenter {
@@ -204,6 +221,11 @@
   padding-right: var(--spacing-5);
 }
 
+.px6 {
+  padding-left: var(--spacing-6);
+  padding-right: var(--spacing-6);
+}
+
 .py1 {
   padding-top: var(--spacing-1);
   padding-bottom: var(--spacing-1);
@@ -304,6 +326,15 @@
   margin-bottom: var(--spacing-5);
 }
 
+.my6 {
+  margin-top: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+}
+
+.rounded0 {
+  border-radius: 0;
+}
+
 .rounded1 {
   border-radius: var(--spacing-2);
 }
@@ -363,4 +394,12 @@
 .darkContainer {
   padding: var(--spacing-6);
   background-color: var(--bg-dark);
+}
+
+.focusNone:focus {
+  outline: none;
+}
+
+.formDialog {
+  width: 100%;
 }

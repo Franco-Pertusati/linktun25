@@ -1,0 +1,11 @@
+<div class="flex flexCol gap6">
+  <div class="flex flexCol gap3">
+    <span>QR Code Preview</span>
+    <div class="mAuto">
+      <app-qr-code [url]="dialogData" />
+    </div>
+  </div>
+  <div class="flex justEnd">
+    <app-button [icon]="'check'" [label]="'apply'" [style]="'filled'" />
+  </div>
+</div>

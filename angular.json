@@ -3,11 +3,32 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "linktun-25": {
+    "dashboard-angular-19": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
         "@schematics/angular:component": {
-          "skipTests": false
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -17,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/linktun-25",
+            "outputPath": "dist/dashboard-angular-19",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -63,10 +84,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "linktun-25:build:production"
+              "buildTarget": "dashboard-angular-19:build:production"
             },
             "development": {
-              "buildTarget": "linktun-25:build:development"
+              "buildTarget": "dashboard-angular-19:build:development"
             }
           },
           "defaultConfiguration": "development"

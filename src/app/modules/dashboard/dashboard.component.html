@@ -1,0 +1,30 @@
+<div class="dashboardContainer bg">
+  <header>
+    <div class="flex itemsCenter gap6">
+      <app-button [icon]="'menu'" (click)="isSidebarOpen = !isSidebarOpen" />
+      <span class="boldText">AppName</span>
+    </div>
+    <div class="flex justCenter gap6">
+        <input  placeholder="Search" />
+    </div>
+    <div class="flex gap6 justEnd">
+      <app-button [icon]="'dark_mode'" />
+      <app-button [icon]="'notifications'" />
+      <app-button [icon]="'person'" />
+    </div>
+  </header>
+  <div class="sidebarMainContent">
+    <aside [ngClass]="isSidebarOpen ? 'sideBarOpen' : ''">
+      @for (btn of sidebarBtns; track $index) {
+      <app-button
+        [label]="btn.label"
+        [icon]="btn.icon"
+        [style]="'sidebar'"
+        [showLabel]="isSidebarOpen ? true : false"
+      />
+      }
+    </aside>
+    <main class="bgDark wFull hFull">
+    </main>
+  </div>
+</div>

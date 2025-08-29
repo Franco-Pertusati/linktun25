@@ -1,0 +1,112 @@
+<form
+  [formGroup]="registerForm"
+  (ngSubmit)="onSubmit()"
+  class="flex flexCol gap6"
+>
+  <!-- USERNAME -->
+  <div class="flex flexCol gap3">
+    <div class="flex gap3 items-center">
+      <label for="username">Name</label>
+      @if (registerForm.get('username')?.touched && registerForm.get('username')?.invalid) {
+        <span class="errorText smallText">
+          @if (registerForm.get('username')?.errors?.['required']) {
+            Name is required
+          }
+          @if (registerForm.get('username')?.errors?.['minlength']) {
+            Must be at least {{ registerForm.get('username')?.errors?.['minlength'].requiredLength }} characters
+          }
+        </span>
+      }
+    </div>
+    <input
+      placeholder="Jhon"
+      id="username"
+      type="text"
+      class="wFull card"
+      formControlName="username"
+    />
+  </div>
+
+  <!-- EMAIL -->
+  <div class="flex flexCol gap3">
+    <div class="flex gap3 items-center">
+      <label for="email">Email</label>
+      @if (registerForm.get('email')?.touched && registerForm.get('email')?.invalid) {
+        <span class="errorText smallText">
+          @if (registerForm.get('email')?.errors?.['required']) {
+            Email is required
+          }
+          @if (registerForm.get('email')?.errors?.['email']) {
+            Invalid email
+          }
+        </span>
+      }
+    </div>
+    <input
+      placeholder="jhondoe@mail.com"
+      id="email"
+      type="text"
+      class="wFull card"
+      formControlName="email"
+    />
+  </div>
+
+  <!-- PASSWORD -->
+  <div class="flex flexCol gap3">
+    <div class="flex gap3 items-center">
+      <label for="password">Password</label>
+      @if (registerForm.get('password')?.touched && registerForm.get('password')?.invalid) {
+        <span class="errorText smallText">
+          @if (registerForm.get('password')?.errors?.['required']) {
+            Password is required
+          }
+          @if (registerForm.get('password')?.errors?.['minlength']) {
+            Must be at least {{ registerForm.get('password')?.errors?.['minlength'].requiredLength }} characters
+          }
+          @if (registerForm.get('password')?.errors?.['pattern']) {
+            Must include uppercase, lowercase and number
+          }
+        </span>
+      }
+    </div>
+    <input
+      placeholder="········"
+      id="password"
+      type="password"
+      class="wFull card"
+      formControlName="password"
+    />
+  </div>
+
+  <!-- CONFIRM PASSWORD -->
+  <div class="flex flexCol gap3">
+    <div class="flex gap3 items-center">
+      <label for="confirmPassword">Confirm password</label>
+      @if (registerForm.get('confirmPassword')?.touched && registerForm.get('confirmPassword')?.invalid) {
+        <span class="errorText smallText">
+          @if (registerForm.get('confirmPassword')?.errors?.['required']) {
+            Please confirm your password
+          }
+        </span>
+      }
+
+      @if (registerForm.errors?.['passwordMismatch'] && registerForm.get('confirmPassword')?.touched) {
+        <span class="errorText smallText">
+          Passwords do not match
+        </span>
+      }
+    </div>
+    <input
+      placeholder="········"
+      id="confirmPassword"
+      type="password"
+      class="wFull card"
+      formControlName="confirmPassword"
+    />
+  </div>
+
+  <!-- SUBMIT -->
+  <button class="btn btn-form" type="submit">
+    <span>Register</span>
+  </button>
+</form>

@@ -1,0 +1,37 @@
+<div class="flex flexCol gap6 formDialog">
+  <div class="flex gap3 itemsCenter">
+    <span class="mutedText">Demo links</span>
+    <i class="material-symbols-rounded mutedText">chevron_right</i>
+    <span class="mutedText">
+      {{ data.shortCode }}
+    </span>
+  </div>
+  <br />
+  <div class="flex flexCol gap3 wFull">
+    <span>Short link</span>
+    <input class="card" type="text" [value]="data.shortLink" />
+  </div>
+  <div class="flex flexCol gap3 wFull">
+    <span>Destination URL</span>
+    <input class="card" type="text" [value]="data.originalUrl" />
+  </div>
+  <div class="flex flexCol gap3 wFull">
+    <span>Short Code</span>
+    <input class="card" type="text" [value]="data.shortCode" />
+  </div>
+  <div class="flex flexCol gap3 wFull">
+    <span>QR Code</span>
+    <div class="mAuto">
+      <app-qr-code [url]="data.shortLink" />
+    </div>
+  </div>
+  <br />
+  <div class="flex justEnd wFull">
+    <app-button
+      [icon]="'check'"
+      [label]="'Apply'"
+      [style]="'filled'"
+      (click)="demoAlert()"
+    />
+  </div>
+</div>

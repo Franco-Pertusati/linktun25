@@ -1,0 +1,48 @@
+<header class="flex flexCol gap6 hFull">
+  <div class="textCenter">
+    <h1 class="titleText primaryText">Linktun</h1>
+    <span class="textCenter smallText">
+      An open source
+      <strong class="primaryText smallText boldText">link shortener</strong>
+    </span>
+  </div>
+  <ul class="flex flexCol gap4 hFull justCenter">
+    <li>
+      <div class="flex gap6">
+        <i class="material-symbols-rounded primaryText">check</i>
+        <span>No ads during redirection</span>
+      </div>
+    </li>
+    <li>
+      <div class="flex gap6">
+        <i class="material-symbols-rounded primaryText">check</i>
+        <span>Without the need to create an account</span>
+      </div>
+    </li>
+    <li>
+      <div class="flex gap6">
+        <i class="material-symbols-rounded primaryText">check</i>
+        <span>Track clicks</span>
+      </div>
+    </li>
+    <li>
+      <div class="flex gap6">
+        <i class="material-symbols-rounded primaryText">check</i>
+        <span>Create QR codes</span>
+      </div>
+    </li>
+    <li>
+      <div class="flex gap6">
+        <i class="material-symbols-rounded primaryText">check</i>
+        <span>Dashboard for link managment</span>
+      </div>
+    </li>
+  </ul>
+  <div class="mAuto">
+    <app-button
+      [style]="'cta'"
+      [label]="'Try it for free!'"
+      (click)="openLoginDialog()"
+    />
+  </div>
+</header>
