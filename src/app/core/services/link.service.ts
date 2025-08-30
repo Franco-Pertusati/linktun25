@@ -33,7 +33,7 @@ export class LinkService {
         shortLink: `${enviroment.LINKTUN_URL}/${newLinkData.shortCode}`,
         createdAt: newLinkData.createdAt,
         expiresAt: expiresAt,
-        favIcon: '',
+        favIcon: newLinkData.favIcon,
       }
       this.urlList.update(list => [...list, newLink]);
     } catch (error) {

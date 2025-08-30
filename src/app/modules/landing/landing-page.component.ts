@@ -6,10 +6,11 @@ import { LandingUrlListComponent } from "./components/landing-url-list/landing-u
 import { DialogService } from '../../core/services/dialog.service';
 import { RegisterComponent } from '../auth/pages/register/register.component';
 import { LoginFormComponent } from '../auth/components/login-form/login-form.component';
+import { ThemeToggleBtnComponent } from "../../shared/ui/theme-toggle-btn/theme-toggle-btn.component";
 
 @Component({
   selector: 'app-landing-page',
-  imports: [UrlInputComponent, LandingHeaderComponent, ButtonComponent, LandingUrlListComponent],
+  imports: [UrlInputComponent, LandingHeaderComponent, ButtonComponent, LandingUrlListComponent, ThemeToggleBtnComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })

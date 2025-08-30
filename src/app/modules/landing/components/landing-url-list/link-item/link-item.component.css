@@ -1,9 +1,3 @@
-.ogLink {
-  text-wrap-mode: nowrap;
-  text-overflow: ellipsis;
-  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 60%, rgba(202, 240, 76, 0) 100%);
-}
-
 .imgContainer {
   width: 48px;
   min-width: 48px;
@@ -15,13 +9,16 @@
 }
 
 img {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
 }
 
-.shortLink {
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-wrap-mode: nowrap;
-  text-overflow: ellipsis;
-  max-width: 124px;
-  overflow: hidden;
+  width: 100%;
+  overflow-x: hidden;
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, transparent 100%);
 }

@@ -5,10 +5,11 @@ import { DialogService } from '../../../../../core/services/dialog.service';
 import { LinkPanelComponent } from '../link-panel/link-panel.component';
 import { QrCodeDialogComponent } from '../qr-code-dialog/qr-code-dialog.component';
 import { ButtonCopyComponent } from "../../../../../shared/ui/button-copy/button-copy.component";
+import { MinutesToExpirationPipe } from '../../../../../core/pipes/minutes-to-expiration.pipe';
 
 @Component({
   selector: 'app-link-item',
-  imports: [ButtonCopyComponent],
+  imports: [ButtonCopyComponent, MinutesToExpirationPipe],
   templateUrl: './link-item.component.html',
   styleUrl: './link-item.component.css'
 })

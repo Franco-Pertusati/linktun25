@@ -5,5 +5,5 @@ export interface ShortenLink {
   shortLink: string
   createdAt: Date
   expiresAt: Date
-  favIcon: string
+  favIcon?: any
 }
