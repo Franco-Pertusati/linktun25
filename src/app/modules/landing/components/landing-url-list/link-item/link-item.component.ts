@@ -16,7 +16,7 @@ import { MinutesToExpirationPipe } from '../../../../../core/pipes/minutes-to-ex
 export class LinkItemComponent {
   dialog = inject(DialogService)
   link = input.required<ShortenLink>()
-  linkTunUrl = enviroment.LINKTUN_URL
+  linkTunUrl = enviroment.API_URL
 
   openLinkPanel() {
     this.dialog.openDialog(LinkPanelComponent, { linkData: this.link() })

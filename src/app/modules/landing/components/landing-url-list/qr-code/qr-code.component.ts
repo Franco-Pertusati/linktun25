@@ -6,7 +6,6 @@ import { DialogService } from '../../../../../core/services/dialog.service';
   selector: 'app-qr-code',
   imports: [QRCodeComponent],
   templateUrl: './qr-code.component.html',
-  styleUrl: './qr-code.component.css'
 })
 export class QrCodeComponent {
   dialog = inject(DialogService)

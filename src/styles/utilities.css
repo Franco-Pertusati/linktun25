@@ -403,3 +403,7 @@
 .formDialog {
   width: 100%;
 }
+
+.overflowHidden {
+  overflow: hidden;
+}

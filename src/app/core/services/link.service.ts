@@ -30,7 +30,7 @@ export class LinkService {
         id: newLinkData.id,
         originalUrl: newLinkData.originalUrl,
         shortCode: newLinkData.shortCode,
-        shortLink: `${enviroment.LINKTUN_URL}/${newLinkData.shortCode}`,
+        shortLink: `${enviroment.API_URL}/links/${newLinkData.shortCode}`,
         createdAt: newLinkData.createdAt,
         expiresAt: expiresAt,
         favIcon: newLinkData.favIcon,

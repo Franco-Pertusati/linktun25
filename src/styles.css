@@ -15,6 +15,11 @@
   --text: hsl(0, 0%, 90%);
   --text-muted: hsl(0, 0%, 75%);
 
+  --primary: hsl(12, 90%, 60%);
+  --secondary: hsl(44, 100%, 50%);
+
+  --red: hsl(355, 78%, 56%);
+
   --spacing-1: 2px;
   --spacing-2: 4px;
   --spacing-3: 6px;
