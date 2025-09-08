@@ -1,18 +1,22 @@
 <div class="dashboardContainer bg">
-  <header>
-    <div class="flex itemsCenter gap6">
-      <app-button [icon]="'menu'" (click)="isSidebarOpen = !isSidebarOpen" />
-      <span class="boldText">AppName</span>
-    </div>
-    <div class="flex justCenter gap6">
-        <input  placeholder="Search" />
-    </div>
-    <div class="flex gap6 justEnd">
-      <app-button [icon]="'dark_mode'" />
-      <app-button [icon]="'notifications'" />
-      <app-button [icon]="'person'" />
-    </div>
-  </header>
+  <div class="p4 headerContainer">
+    <header>
+      <div class="flex itemsCenter gap6">
+        <app-button [icon]="'menu'" (click)="isSidebarOpen = !isSidebarOpen" />
+        <span class="boldText appTitle">Linktun</span>
+      </div>
+      <div class="flex justCenter gap6">
+        <input placeholder="Search" />
+      </div>
+      <div class="flex gap6 justEnd">
+        <div class="extraHeaderBtns flex gap6">
+          <app-theme-toggle-btn />
+          <app-button [icon]="'notifications'" />
+        </div>
+        <app-button [icon]="'person'" />
+      </div>
+    </header>
+  </div>
   <div class="sidebarMainContent">
     <aside [ngClass]="isSidebarOpen ? 'sideBarOpen' : ''">
       @for (btn of sidebarBtns; track $index) {
@@ -23,8 +27,12 @@
         [showLabel]="isSidebarOpen ? true : false"
       />
       }
+      <div class="extraAsideBtns">
+        <app-theme-toggle-btn />
+      </div>
     </aside>
     <main class="bgDark wFull hFull">
+      <router-outlet />
     </main>
   </div>
 </div>

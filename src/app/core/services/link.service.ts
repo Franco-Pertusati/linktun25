@@ -10,7 +10,6 @@ export class LinkService {
   urlList = signal<ShortenLink[]>([])
 
   async shorten(originalUrl: string, expiresAt: Date): Promise<any> {
-
     try {
       const response = await fetch(this.apiUrl, {
         method: 'POST',
@@ -38,6 +37,26 @@ export class LinkService {
       this.urlList.update(list => [...list, newLink]);
     } catch (error) {
       throw error;
+    }
+  }
+
+  async getLinks() {
+    try {
+      const response = await fetch(this.apiUrl, {
+        method: "GET",
+        credentials: "include",
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      }
+
+      const links = await response.json();
+      console.log("User links:", links);
+      return links;
+    } catch (error) {
+      console.error("Failed to fetch user links:", error);
+      return [];
     }
   }
 }

@@ -144,6 +144,10 @@
   align-items: center;
 }
 
+.flexWrap {
+  flex-wrap: wrap;
+}
+
 .gap1 {
   gap: var(--spacing-1);
 }
@@ -406,4 +410,12 @@
 
 .overflowHidden {
   overflow: hidden;
+}
+
+.layoutWidth {
+  max-width: 1080px;
+}
+
+.border {
+  border: solid 1px var(--border);
 }

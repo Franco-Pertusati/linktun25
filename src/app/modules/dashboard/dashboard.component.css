@@ -7,13 +7,11 @@
 
 .sidebarMainContent {
   display: flex;
-  height: calc(100% - 64px);
+  height: calc(100% - 54px);
 }
 
 header {
   width: 100%;
-  padding: var(--spacing-4);
-  height: 64px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -33,6 +31,14 @@ main {
   overflow: auto;
 }
 
+.hide {
+  display: none;
+}
+
+.extraAsideBtns {
+  display: none;
+}
+
 @media (max-width: 720px) {
   aside {
     padding-top: 12px;
@@ -50,6 +56,34 @@ main {
   }
 
   header {
+    height: fit-content;
+  }
+
+  .headerContainer {
     border-bottom: solid 1px var(--border);
+  }
+}
+
+@media (max-width: 600px) {
+  .appTitle {
+    display: none;
+  }
+
+  .extraHeaderBtns {
+    display: none;
+  }
+
+  header {
+    background-color: var(--bg-dark);
+    border-style: none;
+    padding: var(--spacing-2);
+    height: fit-content;
+    border-radius: var(--spacing-6);
+  }
+
+  .extraAsideBtns {
+    display: flex;
+    height: 100%;
+    padding-bottom: var(--spacing-4);
   }
 }
