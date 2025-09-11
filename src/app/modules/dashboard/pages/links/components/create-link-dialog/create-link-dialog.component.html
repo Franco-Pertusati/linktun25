@@ -1,0 +1,50 @@
+<form
+  class="flex flexCol gap6 formDialog"
+  [formGroup]="newLinkForm"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="flex gap3 itemsCenter">
+    <span class="mutedText">Your links</span>
+    <i class="material-symbols-rounded mutedText">chevron_right</i>
+    <span class="mutedText"> New link </span>
+  </div>
+  <br />
+  <div class="flex flexCol gap3 wFull">
+    <div class="flex gap3 items-center">
+      <label>Destination URL</label>
+      @if (newLinkForm.get('originalUrl')?.touched &&
+      newLinkForm.get('originalUrl')?.invalid) {
+      <span class="errorText smallText"> The original url is required </span>
+      }
+    </div>
+    <input
+      formControlName="originalUrl"
+      id="originalUrl"
+      class="card wFull"
+      type="text"
+      placeholder="https://github.com/Franco-Pertusati"
+    />
+  </div>
+  <div class="flex flexCol gap3 wFull">
+    <div class="flex gap3 items-center">
+      <label>Expiration Date</label>
+      @if (newLinkForm.get('expirationDate')?.touched &&
+      newLinkForm.get('expirationDate')?.invalid) {
+      <span class="errorText smallText"> The expiration date is required </span>
+      }
+    </div>
+    <input
+      class="card wFull"
+      id="expirationDate"
+      type="date"
+      formControlName="expirationDate"
+    />
+  </div>
+  <br />
+  <div class="flex justEnd wFull">
+    <button class="btn-filled py3 px6" type="submit">
+      <i class="material-symbols-rounded">add</i>
+      <span>Create</span>
+    </button>
+  </div>
+</form>

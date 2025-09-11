@@ -40,7 +40,14 @@
   --text: hsl(0, 0%, 10%);
   --text-muted: hsl(0, 0%, 25%);
 
-  --primary: hsl(12, 84%, 65%);
+  --primary-700: hsl(2, 83%, 40%);
+  --primary-600: hsl(5, 85%, 48%);
+  --primary-500: hsl(10, 89%, 53%);
+  --primary: hsl(12, 90%, 60%);
+  --primary-300: hsl(16, 91%, 72%);
+  --primary-200: hsl(18, 91%, 83%);
+  --primary-100: hsl(19, 95%, 92%);
+
   --secondary: #ffbd00;
 
   --red: #E63946;

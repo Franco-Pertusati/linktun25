@@ -1,6 +1,7 @@
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, ɵɵsetComponentScope } from '@angular/core';
 import { enviroment } from '../../../enviroments/enviroment';
 import { ToastService } from './toast.service';
+import { json } from 'body-parser';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { ToastService } from './toast.service';
 export class AuthService {
   toast = inject(ToastService)
   private apiUrl = `${enviroment.API_URL}/auth`;
+  userdata = {}
 
   async register(username: string, email: string, password: string): Promise<any> {
     try {
@@ -39,15 +41,16 @@ export class AuthService {
         body: JSON.stringify({ email, password })
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || 'Error al Loguear');
+        throw new Error(data.message || 'Error al Loguear');
       }
 
-      this.showSuccesToast(true)
-      return await response.json();
+      this.toast.success(`Welcome back ${data.user.username}.`);
+      this.userdata = data.user;
     } catch (error: any) {
-      this.showErrorToast('login', error)
+      this.showErrorToast('login', error);
       throw error;
     }
   }
@@ -74,7 +77,7 @@ export class AuthService {
     this.toast.error(`Erorr during ${procces}`, error.message)
   }
 
-  private showSuccesToast(firstTime: boolean) {
-    this.toast.success(`Welcome ${firstTime ? 'back.' : '.'}`)
+  private showSuccesToast(firstTime: boolean, username: string) {
+    this.toast.success(`Welcome ${firstTime ? `${username}` : '.'}`)
   }
 }

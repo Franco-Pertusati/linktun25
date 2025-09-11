@@ -16,6 +16,7 @@ export class LinkService {
         headers: {
           'Content-Type': 'application/json'
         },
+        credentials: "include",
         body: JSON.stringify({ originalUrl, expiresAt })
       });
 
@@ -51,8 +52,7 @@ export class LinkService {
         throw new Error(`Error ${response.status}: ${response.statusText}`);
       }
 
-      const links = await response.json();
-      console.log("User links:", links);
+      const links: ShortenLink[] = await response.json();
       return links;
     } catch (error) {
       console.error("Failed to fetch user links:", error);
