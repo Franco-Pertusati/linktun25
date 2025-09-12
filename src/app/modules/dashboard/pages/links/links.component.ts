@@ -4,11 +4,11 @@ import { LinkService } from '../../../../core/services/link.service';
 import { DialogService } from '../../../../core/services/dialog.service';
 import { CreateLinkDialogComponent } from './components/create-link-dialog/create-link-dialog.component';
 import { ShortenLink } from '../../../../core/interfaces/link';
-import { LinkItemComponent } from "../../../landing/components/landing-url-list/link-item/link-item.component";
+import { DashboardLinkItemComponent } from './components/dashboard-link-item/dashboard-link-item.component';
 
 @Component({
   selector: 'app-links',
-  imports: [ButtonComponent, LinkItemComponent],
+  imports: [ButtonComponent, DashboardLinkItemComponent],
   templateUrl: './links.component.html',
   styleUrl: './links.component.css'
 })
@@ -19,6 +19,7 @@ export class LinksComponent {
 
   async ngOnInit() {
     this.linksList = await this.linkService.getLinks();
+    console.log(this.linksList)
   }
 
   openCreateLinkDialog() {

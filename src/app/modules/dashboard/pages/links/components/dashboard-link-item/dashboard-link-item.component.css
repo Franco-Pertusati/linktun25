@@ -1,0 +1,18 @@
+.imgContainer {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  padding: var(--spacing-3);
+  border-radius: 99px;
+  display: grid;
+  place-items: center;
+}
+
+img {
+  width: 32px;
+  height: 32px;
+}
+
+.card:hover {
+  background-color: var(--bg-dark);
+}

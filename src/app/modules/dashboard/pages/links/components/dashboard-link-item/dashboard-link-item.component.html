@@ -1,0 +1,31 @@
+@let l = link();
+
+<div class="card wFull flex gap6 itemsCenter">
+  <div class="imgContainer">
+    <img [src]="l.favIcon" alt="favIcon of the original link web" />
+  </div>
+  <div class="flex flexCol gap3 flexGrow">
+    <div class="flex gap3">
+      <a
+        target="_blank"
+        [href]="`${linkTunUrl}/${l.shortCode}`"
+        class="boldText"
+        >{{ noProtocolUrl }}</a
+      >
+      <app-button-copy [texToCopy]="noProtocolUrl" />
+      <button (click)="openQrDialog()">
+        <i class="material-symbols-rounded">qr_code</i>
+      </button>
+    </div>
+    <div class="flex gap3 itemsCenter">
+      <i class="material-symbols-rounded mutedText">subdirectory_arrow_right</i>
+      <span class="mutedText">
+        {{ l.originalUrl }}
+      </span>
+    </div>
+  </div>
+  <div class="flex gap3">
+    <app-button [icon]="'query_stats'" />
+    <app-button [icon]="'more_vert'" />
+  </div>
+</div>

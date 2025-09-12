@@ -11,10 +11,18 @@
     </div>
   </div>
   <div class="layoutWidth mAuto wFull p6">
-    <div class="p6 wFull">
-      @for (link of linksList; track $index) {
-        <app-link-item [link]="link"/>
-      }
+    <div class="wFull flex flexCol gap6">
+      @if (linksList.length === 0) {
+      <div class="border p6 rounded6 wFit mAuto flex flexCol gap3">
+        <span class="boldText textCenter">No short links found</span>
+        <div class="flex gap3">
+          <app-button [label]="'Short a link'" [style]="'filled'" (click)="openCreateLinkDialog()" />
+          <app-button [label]="'Learn more'" [style]="'border'" />
+        </div>
+      </div>
+      } @else { @for (link of linksList; track $index) {
+      <app-dashboard-link-item [link]="link" />
+      } }
     </div>
   </div>
 </div>

@@ -148,6 +148,10 @@
   flex-wrap: wrap;
 }
 
+.flexGrow {
+  flex-grow: 1;
+}
+
 .gap1 {
   gap: var(--spacing-1);
 }
@@ -253,6 +257,11 @@
 .py5 {
   padding-top: var(--spacing-5);
   padding-bottom: var(--spacing-5);
+}
+
+.py6 {
+  padding-top: var(--spacing-6);
+  padding-bottom: var(--spacing-6);
 }
 
 /* Margin utilities */

@@ -42,9 +42,6 @@
   </div>
   <br />
   <div class="flex justEnd wFull">
-    <button class="btn-filled py3 px6" type="submit">
-      <i class="material-symbols-rounded">add</i>
-      <span>Create</span>
-    </button>
+    <app-button-promise [state]="shortenState" [icon]="'add'" [style]="'filled'" [label]="'Create short link'" />
   </div>
 </form>

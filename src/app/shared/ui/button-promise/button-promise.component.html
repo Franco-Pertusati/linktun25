@@ -4,7 +4,7 @@ showIcon(), state : state()};
 
 <button
   [class]="`btn-${btn.style} ${btn.extraCss}`"
-  [ngClass]="!btn.showLabel || !btn.label ? 'p3' : 'px6 px3'"
+  [ngClass]="!btn.showLabel || !btn.label ? 'p3' : 'px6 py3'"
 >
   @if (btn.showIcon && btn.icon) {
   <i class="material-symbols-rounded" [ngClass]="btn.state === 'loading'? 'spinInfinite' : ''">
