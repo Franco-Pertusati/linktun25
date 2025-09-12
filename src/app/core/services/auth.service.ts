@@ -9,7 +9,6 @@ import { json } from 'body-parser';
 export class AuthService {
   toast = inject(ToastService)
   private apiUrl = `${enviroment.API_URL}/auth`;
-  userdata = {}
 
   async register(username: string, email: string, password: string): Promise<any> {
     try {
@@ -47,8 +46,8 @@ export class AuthService {
         throw new Error(data.message || 'Error al Loguear');
       }
 
+      localStorage.setItem('userData', JSON.stringify(data.user));
       this.toast.success(`Welcome back ${data.user.username}.`);
-      this.userdata = data.user;
     } catch (error: any) {
       this.showErrorToast('login', error);
       throw error;

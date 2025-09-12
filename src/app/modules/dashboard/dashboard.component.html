@@ -1,12 +1,15 @@
 <div class="container">
-  <aside [ngClass]="isSidebarOpen ? 'sideBarOpen' : 'sidebarClosed'">
+  <aside
+    [ngClass]="isSidebarOpen ? 'sideBarOpen' : 'sidebarClosed'"
+    class="flex flexCol"
+  >
     <div class="flex gap6 itemsCenter">
       <app-button [icon]="'menu'" (click)="isSidebarOpen = !isSidebarOpen" />
       @if (isSidebarOpen) {
       <h1 class="boldText">Linktun</h1>
       }
     </div>
-    <ul>
+    <ul class="flexGrow">
       @for (btn of sidebarBtns; track $index) {
       <li class="flex flexCol justCenter gap6">
         <a
@@ -27,8 +30,19 @@
       </li>
       }
     </ul>
-    <div class="extraAsideBtns">
+    <div class="flex flexCol gap3">
       <app-theme-toggle-btn />
+      <button class="btn-text p3">
+        <i class="material-symbols-rounded">help</i>
+      </button>
+      <button class="btn-text p3" (click)="openPorfile()">
+        <i class="material-symbols-rounded"
+          >person</i
+        >
+        @if (isSidebarOpen) {
+        <span>Gordon</span>
+        }
+      </button>
     </div>
   </aside>
   <main class="bgDark wFull hFull">

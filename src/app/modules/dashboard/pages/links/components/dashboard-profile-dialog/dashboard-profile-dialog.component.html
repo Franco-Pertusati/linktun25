@@ -1,0 +1,10 @@
+<div class="flex flexCol gap6">
+  <span class="titleText textCenter">Hi {{ userData.username }}!</span>
+  <span class="textCenter">{{ userData.email }}</span>
+  <app-button
+    [label]="'Log out'"
+    [style]="'filled'"
+    [icon]="'move_item'"
+    [extraCss]="'mAuto'"
+  />
+</div>

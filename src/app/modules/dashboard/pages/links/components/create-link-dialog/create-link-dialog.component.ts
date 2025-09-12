@@ -32,7 +32,6 @@ export class CreateLinkDialogComponent {
       const { originalUrl, expirationDate } = this.newLinkForm.getRawValue();
       const parsedDate = new Date(expirationDate!);
       try {
-        await this.delay(800);
         await this.linkService.shorten(originalUrl!, parsedDate)
         this.shortenState = 'success';
         this.toast.success('URL shortened successfully');
@@ -47,9 +46,5 @@ export class CreateLinkDialogComponent {
 
   closeDialog() {
     this.dialog.closeDialog()
-  }
-
-  private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
