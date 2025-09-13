@@ -16,3 +16,7 @@ img {
 .card:hover {
   background-color: var(--bg-dark);
 }
+
+.maincont *, span {
+  text-wrap: nowrap;
+}
