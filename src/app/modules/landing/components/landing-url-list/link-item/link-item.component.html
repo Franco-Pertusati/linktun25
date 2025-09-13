@@ -8,7 +8,6 @@
     <div class="flex gap3 itemsCenter">
       <a class="boldText shortLink" [href]="`${linkTunUrl}/${l.shortCode}`">
         {{ reomoveLinkScheme(l.shortLink) }}
-        <!-- {{ `lkt.co/${l.shortCode}` }} -->
       </a>
       <app-button-copy [texToCopy]="l.shortLink" [extraCss]="'p0'" />
       <button (click)="openQrDialog()">
