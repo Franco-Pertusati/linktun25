@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { ButtonComponent } from "../button/button.component";
 import { ThemeService } from '../../../core/services/theme.service';
 
@@ -10,6 +10,8 @@ import { ThemeService } from '../../../core/services/theme.service';
 })
 export class ThemeToggleBtnComponent {
   theme = inject(ThemeService)
+
+  extraCss = input<string>('')
 
   toggleTheme() {
     this.theme.toggleTheme()

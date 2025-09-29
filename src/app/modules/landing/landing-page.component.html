@@ -9,25 +9,26 @@
     <div class="card" id="headerContainer">
       <app-landing-header />
     </div>
-    <div class="card flex flexCol gap3 itemsCenter justCenter">
-      <app-theme-toggle-btn />
-      <span class="mutedText smallText"> Theme </span>
+    <div class="card flex flexCol gap3" style="padding: 0">
+      <app-theme-toggle-btn [extraCss]="'wFull hFull itemsCenter justCenter'" [classList]="'hFull'" />
     </div>
-    <div class="card flex flexCol gap3 itemsCenter justCenter">
+    <div class="card flex flexCol" style="padding: 0">
       <app-button
         [icon]="'person_check'"
-        [extraCss]="'titleCase'"
+        [extraCss]="'titleCase wfull wfull flexCol'"
+        [label]="'Register'"
         (click)="openRegisterDialog()"
+        [classList]="'hFull flex itemsCenter justCenter'"
       />
-      <span class="mutedText smallText"> Register </span>
     </div>
-    <div class="card flex flexCol gap3 itemsCenter justCenter">
+    <div class="card flex flexCol" style="padding: 0">
       <app-button
         [icon]="'person'"
-        [extraCss]="'titleCase'"
+        [extraCss]="'titleCase wfull wfull flexCol'"
+        [label]="'Login'"
         (click)="openLoginDialog()"
+        [classList]="'hFull flex itemsCenter justCenter'"
       />
-      <span class="mutedText smallText"> Login </span>
     </div>
   </div>
 </div>

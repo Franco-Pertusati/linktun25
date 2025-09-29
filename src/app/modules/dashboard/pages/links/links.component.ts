@@ -16,6 +16,15 @@ export class LinksComponent {
   dialog = inject(DialogService)
   linkService = inject(LinkService)
   linksList: ShortenLink[] = []
+  testLink: ShortenLink = {
+    id: 3,
+    shortCode:'wads',
+    originalUrl: 'https://web.whatsapp.com/',
+    createdAt: new Date,
+    expiresAt: new Date,
+    shortLink: '',
+    favIcon: 'https://assets.vercel.com/image/upload/front/favicon/vercel/apple-touch-icon-76x76.png'
+  }
 
   async ngOnInit() {
     this.linksList = await this.linkService.getLinks();
